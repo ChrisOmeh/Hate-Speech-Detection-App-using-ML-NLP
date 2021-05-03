@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from joblib import load
 
-from get_tweet import get_related_tweets
+from get_tweet import fetch_tweets
 
 # load the pipeline object
 pipeline = load("tweetModel_V1.joblib")
