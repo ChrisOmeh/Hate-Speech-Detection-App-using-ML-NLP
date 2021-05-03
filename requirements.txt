@@ -1,7 +1,5 @@
 absl-py==0.10.0
 alembic==1.4.2
-anaconda-client==1.2.2
-anaconda-navigator==1.10.0
 anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1610472525955/work
 apache-airflow==1.10.12
 apispec==1.3.3
