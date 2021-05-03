@@ -26,11 +26,11 @@ authentication.set_access_token(access_token, access_token_secret)
 api = tweepy.API(authentication, wait_on_rate_limit=True)
 
 
-def get_related_tweets(text_query):
+def fetch_tweets(text_query):
     # list to store tweets
     tweets_list = []
     # no of tweets
-    count = 50
+    count = 100
     try:
         # Pulling individual tweets from query
         for tweet in api.search(q=text_query, count=count):
