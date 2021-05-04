@@ -9,7 +9,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+h3 {text-align: center;}
 .topnav {
   overflow: hidden;
   background-color: #e9e9e9;
@@ -87,7 +87,8 @@ body {
   <a class="active" href="#home">Home</a>
   <div class="search-container">
      <form action = "http://localhost:5000/" method = "post">
-      <input type="text" placeholder="Search" name="search">
+         <label for="search">Search Tweet Bar</label>
+      <input type="text" placeholder="Search Tweets" name="search">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
@@ -95,6 +96,8 @@ body {
 
 <div style="padding-left:16px">
   <h2> Twitter Sentiment Analysis </h2>
+    <h3>label 1 == Hate-Speech</h3>
+    <h3>Label 0 == Normal Tweets</h3>
 </div>
 
 </body>

@@ -1,11 +1,10 @@
 # import required libraries
-from flask import *
 import pandas as pd
 import tweepy
 import time
 
-
 pd.set_option('display.max_colwidth', 1000)
+pd.set_option("display.max_rows", None)
 
 # api key
 api_key = "Mi1NZFqxZdsMKQzqsqlpa02Cr"
@@ -34,7 +33,7 @@ def fetch_tweets(text_query):
     try:
         # Pulling individual tweets from query
         for tweet in api.search(q=text_query, count=count):
-            print(tweet.text)
+            print(tweet.created_at), "\t", print(tweet.text)
             # Adding to list that contains all tweets
             tweets_list.append({'created_at': tweet.created_at,
                                 'tweet_id': tweet.id,
@@ -44,3 +43,6 @@ def fetch_tweets(text_query):
     except BaseException as e:
         print('failed on_status,', str(e))
         time.sleep(3)
+
+
+

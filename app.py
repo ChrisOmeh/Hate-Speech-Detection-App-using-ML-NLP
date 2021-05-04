@@ -11,7 +11,7 @@ pipeline = load("tweetModel_V1.joblib")
 # function to get results for a particular text query
 def requestResults(name):
     # get the tweets text
-    tweets = get_related_tweets(name)
+    tweets = fetch_tweets(name)
     # get the prediction
     tweets['prediction'] = pipeline.predict(tweets['tweet_text'])
     # get the value counts of different labels predicted
@@ -43,4 +43,7 @@ def success(name):
     return "<xmp>" + str(requestResults(name)) + " </xmp> "
 
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
+    print("==============RUNNING DONE SUCCESSFULLY===========")
+
